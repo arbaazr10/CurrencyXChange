@@ -62,8 +62,8 @@ public class CurrenctExchangeController : ControllerBase
     [HttpGet(CurrencyExchange.Historical)]
     public async Task<IActionResult> GetHistoricalRates(
         [FromQuery] string baseCurrency,
-        [FromQuery] string startDate,
-        [FromQuery] string endDate,
+        [FromQuery] string startDate="2022-11-30",
+        [FromQuery] string endDate = "2022-12-30",
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10)
     {
